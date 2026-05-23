@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "83153b57-33ab-4bd5-8375-54d56ad6b757",
-    "name": "crud",
+    "_postman_id": "9887c01c-2710-4942-b1f0-de23cabcb59a",
+    "name": "projeto_TO_DO",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "44749672",
-    "_collection_link": "https://go.postman.co/collection/44749672-83153b57-33ab-4bd5-8375-54d56ad6b757?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/44749672-9887c01c-2710-4942-b1f0-de23cabcb59a?source=collection_link"
   },
   "item": [
     {
@@ -120,6 +120,34 @@
               "path": [
                 "usuarios",
                 "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"coluna\": \"nome\",\r\n  \"valor\": \"Pedro Silva\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/usuarios",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuarios"
               ]
             }
           },
@@ -244,6 +272,34 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 5,\r\n  \"coluna\": \"status\",\r\n  \"valor\": \"finalizada\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tarefas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tarefas"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -364,6 +420,34 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 3,\r\n  \"coluna\": \"funcao\",\r\n  \"valor\": \"Desenvolvedor Mobile\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/devs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "devs"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -480,6 +564,34 @@
               "path": [
                 "usuario_tarefa",
                 "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 2,\r\n  \"coluna\": \"idTarefa\",\r\n  \"valor\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/usuario_tarefa",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario_tarefa"
               ]
             }
           },

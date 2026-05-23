@@ -5,8 +5,6 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const pool = await conexao()
-
 import devsRouter from "./src/routes/devs.js";
 app.use("/devs", devsRouter);
 

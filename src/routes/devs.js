@@ -75,6 +75,35 @@ router.put("/", async (req, res) => {
   }
 });
 
+//Atualizar 1 dado
+router.patch("/", async (req, res) => {
+  const {id, coluna, valor} = req.body
+
+  const colunasPermitidas = ['nome', 'funcao', 'frase', 'link_url']; 
+  if (!colunasPermitidas.includes(coluna)) {
+      throw new Error('Coluna inválida');
+  }
+
+  try {
+    const pool = await conexao();
+    const sql = `UPDATE tbDevs 
+                SET ${coluna} = ?
+                WHERE idDev = ?`
+    
+    const [result] = await pool.query(sql, [valor, id]);
+
+    if (result.affectedRows > 0) {
+      res.status(200).json({ message: "Dados atualizados com sucesso"});
+    } else {
+      res.status(400).json({ error: "Erro ao atualizar dados" });
+    }
+
+  } catch (err) {
+    console.error("Erro ao atualizar dados:", err);
+    res.status(500).json({ error: "Erro ao atualizar dados" });
+  }
+});
+
 //Deletar dados
 router.delete("/:idDev", async (req, res) => {
   try {
